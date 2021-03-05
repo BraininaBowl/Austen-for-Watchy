@@ -1,7 +1,7 @@
 #include <Watchy.h> //include the Watchy library
 #include "PTSerif_Bold10pt7b.h"
 #include "PTSerif_Regular10pt7b.h"
-#include "raven.h"        
+#include "pride.h"        
 
 class WatchFace : public Watchy { //inherit and extend Watchy class
   public:
@@ -34,9 +34,9 @@ class WatchFace : public Watchy { //inherit and extend Watchy class
     void drawWatchFace() { //override this method to customize how the watch face looks
 
       int16_t hoffset;
-      int16_t arraylength[] = {3,0,27};
+      int16_t arraylength[] = {11,0,20};
       String nmbrs[] = {"midnight", "one", "two", "three", "four", "five", "six", "seven", "eight","nine","ten","eleven","twelve","thirteen","fourteen","quarter","sixteen","seventeen","eighteen","nineteen","twenty","twenty-one","twenty-two", "twenty-three", "twenty-four", "twenty-five", "twenty-six", "twenty-seven", "twenty-eight", "twenty-nine", "half" };
-      String pretext[] = {"nce", "upon", "a"};
+      String pretext[] = {"t", "is", "a", "truth", "universally", "acknowledged,", "that", "a", "single", "man", "at"};
       String text[10] = {};
       if (currentTime.Hour == 12 && currentTime.Minute == 0){
         text[arraylength[1]] = "noon";
@@ -72,11 +72,11 @@ class WatchFace : public Watchy { //inherit and extend Watchy class
         }
       }
       
-      String posttext[] = {"dreary,", "while", "I", "pondered,", "weak", "and", "weary,", "over", "many", "a", "quaint", "and", "curious", "volume", "of", "forgotten", "lore.", "While", "I", "nodded,", "nearly", "napping,", "suddenly", "there", "came", "a", "tapping"};
+      String posttext[] = {"must", "be", "in", "want", "of", "a", "wife.", "However", "little", "known", "the", "feelings", "or", "views", "of", "such", "a", "man", "may", "be."};
       
       //drawbg
       display.fillScreen(GxEPD_WHITE);
-      display.drawBitmap(4, 4, Raven, 60, 60, GxEPD_BLACK);
+      display.drawBitmap(4, 4, Pride, 60, 60, GxEPD_BLACK);
 
       //draw time
       display.setTextColor(GxEPD_BLACK);
@@ -110,3 +110,14 @@ void setup() {
 void loop() {
   // this should never run, Watchy deep sleeps after init();
 }
+, "while", "I", "pondered,", "weak", "and", "weary,", "over", "many", "a", "quaint", "and", "curious", "volume", "of", "forgotten", "lore.", "While", "I", "nodded,", "nearly", "napping,", "suddenly", "there", "came", "a", "tapping"};
+      
+      //drawbg
+      display.fillScreen(GxEPD_WHITE);
+      display.drawBitmap(4, 4, Raven, 60, 60, GxEPD_BLACK);
+
+      //draw time
+      display.setTextColor(GxEPD_BLACK);
+      display.setTextWrap(false);
+
+      display.setFont(&PT

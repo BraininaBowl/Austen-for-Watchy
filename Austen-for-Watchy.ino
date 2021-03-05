@@ -1,4 +1,4 @@
-#include <Watchy.h> //include the Watchy library
+n#include <Watchy.h> //include the Watchy library
 #include "PTSerif_Bold10pt7b.h"
 #include "PTSerif_Regular10pt7b.h"
 #include "pride.h"        
@@ -110,14 +110,3 @@ void setup() {
 void loop() {
   // this should never run, Watchy deep sleeps after init();
 }
-, "while", "I", "pondered,", "weak", "and", "weary,", "over", "many", "a", "quaint", "and", "curious", "volume", "of", "forgotten", "lore.", "While", "I", "nodded,", "nearly", "napping,", "suddenly", "there", "came", "a", "tapping"};
-      
-      //drawbg
-      display.fillScreen(GxEPD_WHITE);
-      display.drawBitmap(4, 4, Raven, 60, 60, GxEPD_BLACK);
-
-      //draw time
-      display.setTextColor(GxEPD_BLACK);
-      display.setTextWrap(false);
-
-      display.setFont(&PT
